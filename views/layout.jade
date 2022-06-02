@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title='User Authentification'
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet',href='/stylesheets/bootstrap.css ')
+  body
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light
+        .container-fluid
+          a.navbar-brand(href='#') Auth
+          button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+          #navbarNav.collapse.navbar-collapse
+            ul.navbar-nav
+              li.nav-item
+                a.nav-link.active(aria-current='page', href='/') Members
+              li.nav-item
+                a.nav-link(href='/users/register') Register
+              li.nav-item
+                a.nav-link(href='/users/login') LogIn
+              li.nav-item
+                a.nav-link(href='/users/logout') LogOut
+    .container
+      block content
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js')
+    script(src='/javascripts/bootstrap.js')
